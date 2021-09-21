@@ -1,2 +1,1 @@
-web: python bootstrap.
--Dserver.port=$PORT
+web: python bootstrap.py
