@@ -1,6 +1,6 @@
 server:
-  port: "80"
-  address: 0.0.0.0
+  port: 80
+  address: 127.0.0.1
 spring:
   main:
     banner-mode: log
@@ -17,7 +17,7 @@ lavalink:
       http: true
       local: false
     bufferDurationMs: 400
-    youtubePlaylistLoadLimit: 3
+    youtubePlaylistLoadLimit: 100
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
@@ -29,11 +29,14 @@ metrics:
 
 sentry:
   dsn: ""
+#  tags:
+#    some_key: some_value
+#    another_key: another_value
 
 logging:
   file:
-    max-history: 1
-    max-size: 3MB
+    max-history: 30
+    max-size: 1GB
   path: /app/logs/
 
   level:
